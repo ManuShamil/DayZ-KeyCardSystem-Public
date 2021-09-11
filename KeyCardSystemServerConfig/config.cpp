@@ -1,17 +1,17 @@
 class CfgPatches
 {
-	class SecurityDoorScriptsConfig
+	class KeyCardSystemServerConfig
 	{
-		requiredAddons[] = {"SecurityDoorScripts"};
+		requiredAddons[] = {"KeyCardSystemServer"};
 		units[] = {};
 		weapons[] = {};
 	};
 };
 class CfgMods
 {
-	class SecurityDoorScriptsConfig
+	class KeyCardSystemServerConfig
 	{
-		name = "SecurityDoorScriptsConfig";
+		name = "KeyCardSystemServerConfig";
 		type = "mod";
 		dependencies[] = {"World"};
 		class defs
@@ -19,7 +19,7 @@ class CfgMods
 			class worldScriptModule
 			{
 				value = "";
-				files[] = {"SecurityDoorScriptsConfig\4_World"};
+				files[] = {"KeyCardSystemServerConfig\4_World"};
 			};
 		};
 	};

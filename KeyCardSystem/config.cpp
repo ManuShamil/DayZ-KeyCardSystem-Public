@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class SecurityDoorScriptsClient
+	class KeyCardSystem
 	{
 		requiredAddons[] = 
 		{
@@ -13,9 +13,9 @@ class CfgPatches
 };
 class CfgMods
 {
-	class SecurityDoorScriptsClient
+	class KeyCardSystem
 	{
-		name = "SecurityDoorScriptsClient";
+		name = "KeyCardSystem";
 		type = "mod";
 		dependencies[] = {"World"};
 		class defs
@@ -23,7 +23,7 @@ class CfgMods
 			class worldScriptModule
 			{
 				value = "";
-				files[] = {"SecurityDoorScriptsClient\4_World"};
+				files[] = {"KeyCardSystem\4_World"};
 			};
 		};
 	};
@@ -32,6 +32,6 @@ class CfgSounds
 {
 	class KeyCard_DoorAlarm
 	{
-		sound[] = {"SecurityDoorScriptsClient\Assets\Sounds\VaultAlarm10sec",4,1,200};
+		sound[] = {"KeyCardSystem\Assets\Sounds\VaultAlarm10sec",4,1,200};
 	};
 };
