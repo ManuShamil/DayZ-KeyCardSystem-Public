@@ -10,12 +10,10 @@
         "game": [
         ],
         "world": [
-            "SecurityDoorScriptsClient/4_World",
-            "SecurityDoorScripts/4_World",
-            "SecurityDoorScriptsConfig/4_World"
+
         ],
         "mission": [
-            "SecurityDoorScripts/5_Mission"
+
         ]
     },
     "dependencies": [
