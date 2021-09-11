@@ -86,6 +86,14 @@ modded class KeyCard_Door_Base {
 
         SetTimeTillAutoClose( index, m_persistanceData.GetAutoCloseTime() * 1000 );
 
+        if( m_ClosingAlarm )
+        {
+            GetGame().ObjectDelete(m_ClosingAlarm);
+		    m_ClosingAlarm = NULL;
+        }
+        
+        m_ClosingAlarm = PlaySound("KeyCard_DoorAlarm", 200, false);
+
         /* Spawn crate */
         SpawnRewards();
     }
