@@ -115,7 +115,7 @@ class PluginKeyCardSystemServer : PluginBase
 
         if ( !FileExist( CONFIG )) 
         {
-            m_config.InsertLocation( "Land_KlimaX_T1Door", "8336.31 6.364 2941.23", "0 0 0", 300.0 /* 5 mins */, "8339.31 6.364 2941.23", "0 0 0", 12 );
+            m_config.InsertLocation( "Land_KlimaX_T1Door", "8336.31 6.364 2941.23", "0 0 0", 300.0 /* 5 mins */, "8339.31 6.364 2941.23", "0 0 0", 10 );
 
             JsonFileLoader<ref KeyCardSystemConfig>.JsonSaveFile( CONFIG, m_config);
         }
