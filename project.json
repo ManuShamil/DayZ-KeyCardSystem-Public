@@ -1,0 +1,62 @@
+{
+    "name": "DayZ-KeyCardSystem-Commercial",
+    "game_dir": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp",
+    "profile": "DEV",
+    "project_files": {
+        "image": [],
+        "widget": [],
+        "core": [],
+        "gameLib": [],
+        "game": [
+        ],
+        "world": [
+            "SecurityDoorScriptsClient/4_World",
+            "SecurityDoorScripts/4_World",
+            "SecurityDoorScriptsConfig/4_World"
+        ],
+        "mission": [
+            "SecurityDoorScripts/5_Mission"
+        ]
+    },
+    "dependencies": [
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "Dependencies/CF/cf_scripts.json"
+        },
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "Dependencies/CF/cf_xml.json"
+        },
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "Dependencies/COT/cot_scripts.json"
+        },
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "Dependencies/COT/cot_objects.json"
+        },
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "Dependencies/COT/cot_languagecore.json"
+        },
+        {
+            "type": "pbo",
+            "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/KlimaX_Doors.pbo",
+            "project_files": [
+
+            ]
+        },
+        {
+            "type": "pbo",
+            "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/RedemptionKeyCards.pbo",
+            "project_files": [
+
+            ]
+        }
+    ]
+}

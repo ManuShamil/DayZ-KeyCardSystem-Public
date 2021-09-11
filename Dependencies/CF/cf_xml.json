@@ -1,0 +1,22 @@
+{
+    "comments": "for custom pbos with no pre existing templates",
+    "type": "pbo",
+    "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@CF/Addons/XML.pbo",
+    "project_files": {
+        "core": [
+
+        ],
+        "gameLib": [
+            
+        ],
+        "game": [
+            "JM/CF/XML/3_Game"
+        ],
+        "world": [
+
+        ],
+        "mission": [
+
+        ]
+    }
+}

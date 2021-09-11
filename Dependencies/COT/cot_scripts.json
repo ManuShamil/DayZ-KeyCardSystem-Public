@@ -1,0 +1,16 @@
+{
+    "comments": "for custom pbos with no pre existing templates",
+    "type": "pbo",
+    "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@Community-Online-Tools/Addons/Scripts.pbo",
+    "project_files": {
+        "game": [
+            "JM/COT/Scripts/3_Game"
+        ],
+        "world": [
+            "JM/COT/Scripts/4_World"
+        ],
+        "mission": [
+            "JM/COT/Scripts/5_Mission"
+        ]
+    }
+}
