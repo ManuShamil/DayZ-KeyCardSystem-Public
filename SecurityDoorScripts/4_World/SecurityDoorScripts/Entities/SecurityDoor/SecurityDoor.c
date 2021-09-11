@@ -96,7 +96,7 @@ modded class KeyCard_Door_Base {
         
         GetGame().GetCallQueue( CALL_CATEGORY_SYSTEM ).CallLater( Close, delay * 1000, false, index );
 
-        m_ClosingAlarm = PlaySound("SDM_Security_Alarm_Sound_Warning", 200, false);
+        m_ClosingAlarm = PlaySound("KeyCard_DoorAlarm", 200, false);
         m_IsClosing = true;
     }
 

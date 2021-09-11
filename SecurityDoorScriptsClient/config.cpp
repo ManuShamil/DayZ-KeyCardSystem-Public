@@ -28,3 +28,10 @@ class CfgMods
 		};
 	};
 };
+class CfgSounds
+{
+	class KeyCard_DoorAlarm
+	{
+		sound[] = {"SecurityDoorScriptsClient\Assets\Sounds\VaultAlarm10sec",4,1,200};
+	};
+};
