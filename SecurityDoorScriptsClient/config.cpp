@@ -2,7 +2,11 @@ class CfgPatches
 {
 	class SecurityDoorScriptsClient
 	{
-		requiredAddons[] = {"SecurityDoorMod"};
+		requiredAddons[] = 
+		{
+			"KlimaX_Doors",
+			"RedemptionKeyCards"
+		};
 		units[] = {};
 		weapons[] = {};
 	};
