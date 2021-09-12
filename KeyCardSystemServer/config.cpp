@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class KeyCardSystemServer
 	{
-		requiredAddons[] = {"SecurityDoorScriptsClient"};
+		requiredAddons[] = {"KeyCardSystem"};
 		units[] = {};
 		weapons[] = {};
 	};
