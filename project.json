@@ -47,7 +47,7 @@
             "noLoad": true,
             "comments": "for custom pbos with no pre existing templates",
             "type": "pbo",
-            "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ/!Workshop/@VPPAdminTools/Addons/VPPAdminTools.pbo",
+            "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@VPPAdminTools/Addons/VPPAdminTools.pbo",
             "project_files": {
             }
         }
