@@ -28,22 +28,6 @@
             "path": "Dependencies/CF/cf_xml.json"
         },
         {
-            "type": "pbo",
-            "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/KlimaX_Doors.pbo",
-            "noLoad": true,
-            "project_files": [
-
-            ]
-        },
-        {
-            "type": "pbo",
-            "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/RedemptionKeyCards.pbo",
-            "noLoad": true,
-            "project_files": [
-
-            ]
-        },
-        {
             "noLoad": true,
             "comments": "for custom pbos with no pre existing templates",
             "type": "pbo",
