@@ -32,6 +32,6 @@ class CfgSounds
 {
 	class KeyCard_DoorAlarm
 	{
-		sound[] = {"KeyCardSystem\Assets\Sounds\VaultAlarm10sec",4,1,200};
+		sound[] = {"KeyCardSystem\Assets\Sounds\VaultAlarm10sec",1,1,200};
 	};
 };

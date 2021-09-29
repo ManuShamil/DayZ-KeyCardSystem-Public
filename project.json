@@ -28,21 +28,6 @@
             "path": "Dependencies/CF/cf_xml.json"
         },
         {
-            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
-            "type": "setting",
-            "path": "Dependencies/COT/cot_scripts.json"
-        },
-        {
-            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
-            "type": "setting",
-            "path": "Dependencies/COT/cot_objects.json"
-        },
-        {
-            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
-            "type": "setting",
-            "path": "Dependencies/COT/cot_languagecore.json"
-        },
-        {
             "type": "pbo",
             "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/KlimaX_Doors.pbo",
             "noLoad": true,
@@ -57,6 +42,14 @@
             "project_files": [
 
             ]
+        },
+        {
+            "noLoad": true,
+            "comments": "for custom pbos with no pre existing templates",
+            "type": "pbo",
+            "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ/!Workshop/@VPPAdminTools/Addons/VPPAdminTools.pbo",
+            "project_files": {
+            }
         }
     ]
 }
