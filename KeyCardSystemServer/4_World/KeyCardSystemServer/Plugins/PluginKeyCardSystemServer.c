@@ -370,13 +370,14 @@ class PluginKeyCardSystemServer : PluginBase
     Object SpawnRewardCrate( string className, vector position, vector orientation ) 
     {
         Object crate = GetGame().CreateObject( className, position);
-
+        
         if (!crate)
             return NULL;
 
-        if( orientation )
-            crate.SetOrientation( orientation );
-
+        crate.SetPosition( crate.GetPosition() );
+        crate.SetOrientation( orientation );
+        crate.SetOrientation( crate.GetOrientation() );
+        
         return crate;
     }
 
