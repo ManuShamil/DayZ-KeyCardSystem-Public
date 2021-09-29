@@ -10,7 +10,7 @@ modded class Land_KlimaX_T1Door
     */
     override string GetCrateClassName()
     {
-        return "Msp_MilitaryCrate_Heli_Weapons";
+        return "RedemptionMilitaryCrate";
     }
     override void AddLoot( EntityAI crate )
     {
@@ -25,7 +25,7 @@ modded class Land_KlimaX_T2Door
     //super.AddLoot( crate ); /* Ignore global config */
     override string GetCrateClassName()
     {
-        return "Msp_MilitaryCrate_Heli_Weapons";
+        return "RedemptionMilitaryCrate";
     }
 
     override void AddLoot( EntityAI crate )
@@ -38,7 +38,7 @@ modded class Land_KlimaX_T3Door
     //super.AddLoot( crate );
     override string GetCrateClassName()
     {
-        return "Msp_MilitaryCrate_Heli_Weapons";
+        return "RedemptionMilitaryCrate";
     }
 
     override void AddLoot( EntityAI crate )
