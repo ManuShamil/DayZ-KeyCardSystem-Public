@@ -43,7 +43,7 @@ modded class ActionOpenDoors
         if (!target)
             return false;
 
-        m_IsSecurityDoor = IsSecurityDoor( target.GetObject());
+        m_IsSecurityDoor = IsSecurityDoor( target.GetObject() );
 
         if( m_IsSecurityDoor ) 
         {
@@ -54,11 +54,11 @@ modded class ActionOpenDoors
 
             KeyCard_Base keyCard;
 
-            if (inHandItem)
-                Class.CastTo( keyCard, inHandItem);
+            if (inHandItem && !Class.CastTo( keyCard, inHandItem))
+                return false;
 
             if( CanAuthorize( target.GetObject(), keyCard ) ) 
-                return super.ActionCondition( player, target, inHandItem );
+                return super.ActionCondition( player, target, item );
             else
                 return false;
 
