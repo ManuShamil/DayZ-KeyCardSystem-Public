@@ -150,4 +150,9 @@ class CfgVehicles
 		scope = 2;
 		hiddenSelectionsTextures[] = {"RedemptionKeyCards\Data\Textures\Crate\crate_co.paa"};
 	};
+	class Land_RedemptionMilitaryCrate: HouseNoDestruct
+	{
+		scope = 1;
+		model = "RedemptionKeyCards\Data\Crate.p3d";
+	};
 };
