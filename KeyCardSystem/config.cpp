@@ -5,7 +5,8 @@ class CfgPatches
 		requiredAddons[] = 
 		{
 			"KlimaX_Doors",
-			"RedemptionKeyCards"
+			"RedemptionKeyCards",
+			"DZ_Characters"
 		};
 		units[] = {};
 		weapons[] = {};
@@ -33,5 +34,17 @@ class CfgSounds
 	class KeyCard_DoorAlarm
 	{
 		sound[] = {"KeyCardSystem\Assets\Sounds\VaultAlarm10sec",1,1,200};
+	};
+};
+class CfgVehicles
+{
+	class Man;
+	class SurvivorBase: Man
+	{
+		class NoiseActionKeyCardDoorOpen
+		{
+			strength=100;
+			type="sound";
+		};
 	};
 };
