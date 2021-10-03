@@ -202,14 +202,25 @@ class PluginKeyCardSystemServer : PluginBase
         DeleteFile( PERSISTANCE_DATA );
     }
 
+    void StaticItemsSpawn()
+    {
+        /*
+        *   Override
+        */
+
+        Print("KEYCARDSYSTEM: SPAWNING STATIC ITEMS");
+
+        return;
+    }
+
 
     void SpawnItems() 
     {
         /*
         *   Has to be called from OnMissionStart() 
         */
-
-        int i = 0;
+        
+        StaticItemsSpawn();
 
         if ( m_HasConfigChanged ) {
 
