@@ -105,7 +105,7 @@ modded class ActionOpenDoors
         }
 
 		m_NoisePar = new NoiseParams();
-		m_NoisePar.LoadFromPath("CfgVehicles SurvivorBase NoiseActionKeyCardDoorOpen");
+		m_NoisePar.LoadFromPath("CfgVehicles SurvivorBase NoiseActionDefault");
 
         Print("m_NoisePar " + m_NoisePar);
         
@@ -113,7 +113,7 @@ modded class ActionOpenDoors
 		if ( noise )
 		{
 			if ( action_data.m_Player )
-				noise.AddNoisePos(action_data.m_Player, action_data.m_Target.GetObject().GetPosition(), m_NoisePar);
+				noise.AddNoisePos(action_data.m_Player, action_data.m_Target.GetObject().GetPosition(), m_NoisePar, 1000);
 		}
 	}
 	
