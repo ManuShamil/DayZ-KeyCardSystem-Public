@@ -80,7 +80,8 @@ modded class ActionOpenDoors
 
             KeyCard_Door_Base door;
 
-            if (Class.CastTo( door, action_data.m_Target.GetObject())) {
+            if (Class.CastTo( door, action_data.m_Target.GetObject())) 
+            {
 
                 int doorIndex = door.GetDoorIndex(action_data.m_Target.GetComponentIndex());
                 if ( doorIndex != -1 )
@@ -93,6 +94,24 @@ modded class ActionOpenDoors
 
         super.OnStartServer( action_data );
 
+	}
+
+    override void OnEndServer( ActionData action_data )
+	{
+        if ( m_IsSecurityDoor ) 
+        {
+            super.OnEndServer( action_data );
+            return;
+        }
+
+		m_NoisePar = new NoiseParams();
+		m_NoisePar.LoadFromPath("CfgVehicles SurvivorBase NoiseActionDefault");
+		NoiseSystem noise = GetGame().GetNoiseSystem();
+		if ( noise )
+		{
+			if ( action_data.m_Player )
+				noise.AddNoisePos(action_data.m_Player, action_data.m_Target.GetObject().GetPosition(), m_NoisePar, 10);
+		}
 	}
 	
 }
