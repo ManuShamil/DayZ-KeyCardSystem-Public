@@ -36,15 +36,3 @@ class CfgSounds
 		sound[] = {"KeyCardSystem\Assets\Sounds\VaultAlarm10sec",1,1,200};
 	};
 };
-class CfgVehicles
-{
-	class Man;
-	class SurvivorBase: Man
-	{
-		class NoiseActionKeyCardDoorOpen
-		{
-			strength=100;
-			type="sound";
-		};
-	};
-};
