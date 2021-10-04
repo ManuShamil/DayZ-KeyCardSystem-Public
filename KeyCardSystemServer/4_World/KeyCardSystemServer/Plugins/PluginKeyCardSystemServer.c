@@ -115,7 +115,16 @@ class PluginKeyCardSystemServer : PluginBase
 
         if ( !FileExist( CONFIG )) 
         {
-            m_config.InsertLocation( "Land_KlimaX_T1Door", "8336.31 6.364 2941.23", "0 0 0", 300.0 /* 5 mins */, "8339.31 6.364 2941.23", "0 0 0", 10 );
+            
+            m_config.InsertLocation( "Land_KlimaX_T1Door", "2493.35 193.6 5081.33", "-123.0 0 0", 60.0, "2489.09 194.82 5074.34", "75.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T1Door", "9847.759766 283.299988 8708.379883", "-96.003 0.2308 0.5894", 60.0, "9844.941406 283.347778 8708.894531", "95.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T1Door", "6198.29 301.01 7726.8", "124.0 0 0", 60.0, "6200.301270 301.137756 7725.487793", "-45.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T1Door", "7816.770020 140.143997 12409.500000", "1.00002 0 0", 60.0, "7816.721191 140.013031 12410.583008", "170.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T1Door", "7622.580078 214.850006 5201.629883", "-1.00002 0 0", 60.0, "7622.511719 214.923615 5202.895996", "160.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T2Door", "2840.07 270.742 9742.71", "-36.0 -0.5350 -3.30", 60.0, "2835.42 270.0 9749.29", "130.0 2.5 4.0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T2Door", "6035.05 267.285 10400.7", "122.0 0.0769 0.0481", 60.0, "6041.54 267.351 10396.6", "-35.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T2Door", "3966.530029 311.619995 8777.599609", "179.0 -1.0002 0.0018", 60.0, "3966.502197 311.533478 8772.284180", "-30.0 0 0", 10 );
+            m_config.InsertLocation( "Land_KlimaX_T3Door", "1747.739990 450.299988 14021.799805", "83.991 0.0 0.0", 60.0, "1758.643799 450.303833 14022.893555", "-70.0 0 0", 10 );
 
             JsonFileLoader<ref KeyCardSystemConfig>.JsonSaveFile( CONFIG, m_config);
         }
