@@ -106,15 +106,10 @@ modded class ActionOpenDoors
 
 		m_NoisePar = new NoiseParams();
 		m_NoisePar.LoadFromPath("CfgVehicles SurvivorBase NoiseActionDefault");
-
-        Print("m_NoisePar " + m_NoisePar);
         
 		NoiseSystem noise = GetGame().GetNoiseSystem();
-		if ( noise )
-		{
-			if ( action_data.m_Player )
-				noise.AddNoisePos(action_data.m_Player, action_data.m_Target.GetObject().GetPosition(), m_NoisePar, 1000);
-		}
+		if ( noise && action_data.m_Player)
+			noise.AddNoisePos(action_data.m_Player, action_data.m_Target.GetObject().GetPosition(), m_NoisePar, 1000);
 	}
 	
 }
