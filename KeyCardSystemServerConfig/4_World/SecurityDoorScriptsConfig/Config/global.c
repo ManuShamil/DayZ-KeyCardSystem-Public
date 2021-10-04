@@ -29,7 +29,7 @@ const static ref array<string> KEYCARD_PANTS =
     "TTSKOPants", "TacticalShirt_Black", "TacticalShirt_Olive", "TacticalShirt_Tan"
 };
 
-const static ref array<String> KEYCARD_OTHERITEMS =
+const static ref array<string> KEYCARD_OTHERITEMS =
 {
     "TTSKOBoots", "Mich2001Helmet"
 };
