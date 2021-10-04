@@ -9,6 +9,7 @@ modded class Land_KlimaX_T1Door
     }
     override void AddLoot( EntityAI crate )
     {
+        int i;
 
         int rndIndex;
 		EntityAI weapon;
@@ -22,7 +23,7 @@ modded class Land_KlimaX_T1Door
             weapon.GetInventory().CreateAttachment("GhillieAtt_Woodland");
         }
 
-        for (int i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Ammo_308WinTracer");
+        for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Ammo_308WinTracer");
 
         rndIndex = Math.RandomInt(0,2);
         switch( rndIndex )
@@ -31,7 +32,7 @@ modded class Land_KlimaX_T1Door
                 weapon = crate.GetInventory().CreateInInventory("M4A1");
                 if ( weapon )
                 {
-                    for (int i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_STANAG_30Rnd");
+                    for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_STANAG_30Rnd");
                 }
                 break;
             case 1:
