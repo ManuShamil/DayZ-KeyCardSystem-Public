@@ -28,7 +28,11 @@ modded class Land_KlimaX_T1Door
         switch( rndIndex )
         {
             case 0:
-                
+                weapon = crate.GetInventory().CreateInInventory("M4A1");
+                if ( weapon )
+                {
+                    for (int i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_STANAG_30Rnd");
+                }
                 break;
             case 1:
                 break;
