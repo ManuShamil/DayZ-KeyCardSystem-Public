@@ -63,7 +63,7 @@ modded class Land_KlimaX_T3Door
         const ref array<string> foodItems = { "BakedBeansCan", "TacticalBaconCan", "PeachesCan", "TunaCan" };
         int foodItemsListCount = foodItems.Count();
 
-        for (i=0; i<Math.RandomInt(1,4); i++) 
+        for (i=0; i<Math.RandomInt(4,10); i++) 
         {
             string foodName = foodItems.Get( Math.RandomInt( 0, foodItemsListCount ) )
             crate.GetInventory().CreateInInventory( foodName );
