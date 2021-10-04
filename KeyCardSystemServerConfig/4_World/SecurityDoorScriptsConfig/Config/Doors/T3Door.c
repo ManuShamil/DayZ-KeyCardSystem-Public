@@ -12,15 +12,15 @@ modded class Land_KlimaX_T3Door
        int i;
 
         int rndIndex;
-		EntityAI weapon;
-		EntityAI optic;
+		EntityAI obj;
+		EntityAI attachment;
 
-
-        weapon = crate.GetInventory().CreateInInventory("Winchester70_Black");
-        if ( weapon )
+        //! Weapons
+        obj = crate.GetInventory().CreateInInventory("Winchester70_Black");
+        if ( obj )
         {
-            weapon.GetInventory().CreateAttachment("HuntingOptic");
-            weapon.GetInventory().CreateAttachment("GhillieAtt_Woodland");
+            obj.GetInventory().CreateAttachment("HuntingOptic");
+            obj.GetInventory().CreateAttachment("GhillieAtt_Woodland");
         }
 
         for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Ammo_308WinTracer");
@@ -29,32 +29,36 @@ modded class Land_KlimaX_T3Door
         switch( rndIndex )
         {
             case 0:
-                weapon = crate.GetInventory().CreateInInventory("M4A1");
-                if ( weapon )
+                obj = crate.GetInventory().CreateInInventory("M4A1");
+                if ( obj )
                 {
-                    weapon.GetInventory().CreateAttachment("M4_OEBttstck");
-                    weapon.GetInventory().CreateAttachment("M4_Suppressor");
-                    weapon.GetInventory().CreateAttachment("M4_PlasticHndgrd");
+                    obj.GetInventory().CreateAttachment("M4_OEBttstck");
+                    obj.GetInventory().CreateAttachment("M4_Suppressor");
+                    obj.GetInventory().CreateAttachment("M4_PlasticHndgrd");
 
-                    optic = weapon.GetInventory().CreateAttachment("ReflexOptic");
-                    if ( optic ) optic.GetInventory().CreateAttachment("Battery9V");
+                    attachment = obj.GetInventory().CreateAttachment("ReflexOptic");
+                    if ( attachment ) attachment.GetInventory().CreateAttachment("Battery9V");
 
                 }
                 for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_STANAG_30Rnd");
 
                 break;
             case 1:
-                weapon = crate.GetInventory().CreateInInventory("SVD");
-                if ( weapon )
+                obj = crate.GetInventory().CreateInInventory("SVD");
+                if ( obj )
                 {
-                    weapon.GetInventory().CreateAttachment("AK_Suppressor");
-                    optic = weapon.GetInventory().CreateAttachment("PSO11Optic");
-                    if ( optic ) optic.GetInventory().CreateAttachment("Battery9V");
+                    obj.GetInventory().CreateAttachment("AK_Suppressor");
+                    obj.GetInventory().CreateAttachment("GhillieAtt_Woodland");
+
+                    attachment = obj.GetInventory().CreateAttachment("PSO11Optic");
+                    if ( attachment ) attachment.GetInventory().CreateAttachment("Battery9V");
 
                 }
                 for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_SVD_10Rnd");
 
                 break;
         }
+
+        //Food
     }
 };
