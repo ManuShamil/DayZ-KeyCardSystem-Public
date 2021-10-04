@@ -32,8 +32,16 @@ modded class Land_KlimaX_T3Door
                 weapon = crate.GetInventory().CreateInInventory("M4A1");
                 if ( weapon )
                 {
-                    for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_STANAG_30Rnd");
+                    weapon.GetInventory().CreateAttachment("ReflexOptic");
+                    weapon.GetInventory().CreateAttachment("M4_Suppressor");
+                    weapon.GetInventory().CreateAttachment("M4_PlasticHndgrd");
+
+                    optic = weapon.GetInventory().CreateAttachment("M4_Suppressor");
+                    if ( optic ) optic.GetInventory().CreateAttachment("Battery9V");
+
                 }
+                for (i=0; i<Math.RandomInt(1,4); i++) crate.GetInventory().CreateInInventory("Mag_STANAG_30Rnd");
+                
                 break;
             case 1:
                 break;
