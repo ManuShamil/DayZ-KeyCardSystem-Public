@@ -60,10 +60,13 @@ modded class Land_KlimaX_T3Door
         }
 
         //! Food
-        const ref array<string> foodItems = { "BakedBeansCan", "TacticalBaconCan", "PeachesCan", "TunaCan" };
+        const ref array<string> foodItems = { 
+            "BakedBeansCan", "TacticalBaconCan", "PeachesCan", "TunaCan",
+            "SodaCan_Pipsi", "SodaCan_Cola", "SodaCan_Spite", "SodaCan_Fronta"
+        };
         int foodItemsListCount = foodItems.Count();
 
-        for (i=0; i<Math.RandomInt(4,10); i++) 
+        for (i=0; i<Math.RandomInt(10,20); i++) 
         {
             string foodName = foodItems.Get( Math.RandomInt( 0, foodItemsListCount ) )
             crate.GetInventory().CreateInInventory( foodName );
