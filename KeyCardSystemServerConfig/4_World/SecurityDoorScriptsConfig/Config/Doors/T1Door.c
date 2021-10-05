@@ -9,7 +9,7 @@ modded class Land_KlimaX_T1Door
     }
     override void AddLoot( EntityAI crate )
     {
-int i;
+        int i;
 
         int rndIndex;
 		EntityAI obj;

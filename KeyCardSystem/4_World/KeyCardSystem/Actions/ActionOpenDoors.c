@@ -24,7 +24,7 @@ modded class ActionOpenDoors
         return false;
     }
 
-    protected bool CanAuthorize(Object target, KeyCard_Base card) 
+    protected bool CanAuthorize(Object target, KeyCard_ParentBase card) 
     {
         if ( !target ) return false;
 
@@ -52,7 +52,7 @@ modded class ActionOpenDoors
             if( !inHandItem)
                 return false;
 
-            KeyCard_Base keyCard;
+            KeyCard_ParentBase keyCard;
 
             if (inHandItem && !Class.CastTo( keyCard, inHandItem))
                 return false;
@@ -73,7 +73,7 @@ modded class ActionOpenDoors
         if ( m_IsSecurityDoor ) 
         {
             m_ItemInHands = action_data.m_Player.GetItemInHands();
-            if ( !m_ItemInHands.IsInherited( KeyCard_Base ) )
+            if ( !m_ItemInHands.IsInherited( KeyCard_ParentBase ) )
                 return;
             
             m_ItemInHands.Delete();
