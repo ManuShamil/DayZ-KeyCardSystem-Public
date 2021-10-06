@@ -9,6 +9,6 @@ modded class MissionServer
 
     void T3DoorLootSpawnController( EntityAI Crate )
     {
-
+        Print("MissionServer::T3DoorLootSpawnController()");
     }
 }
