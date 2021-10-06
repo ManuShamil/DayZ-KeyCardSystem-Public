@@ -13,7 +13,7 @@ class CfgMods
 	{
 		name = "KeyCardSystemServerConfig";
 		type = "mod";
-		dependencies[] = {"World"};
+		dependencies[] = {"World", "Mission"};
 		class defs
 		{
 			class worldScriptModule

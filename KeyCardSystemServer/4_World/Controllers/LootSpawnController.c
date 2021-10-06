@@ -2,7 +2,7 @@ class LootSpawnControllerBase
 {
 	private ref static LootSpawnControllerBase m_Instance;
 
-	void LootSpawnController()
+	void LootSpawnControllerBase()
 	{
 		m_Instance = this;
 	}
