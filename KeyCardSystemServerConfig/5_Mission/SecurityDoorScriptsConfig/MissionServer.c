@@ -9,6 +9,6 @@ modded class MissionServer
 
     void T3DoorLootSpawnController( Object Crate )
     {
-        Print("MissionServer::T3DoorLootSpawnController()");
+
     }
 }
