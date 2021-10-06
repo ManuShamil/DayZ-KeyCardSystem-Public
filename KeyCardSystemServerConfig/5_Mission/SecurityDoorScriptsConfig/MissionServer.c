@@ -7,7 +7,7 @@ modded class MissionServer
         new KeyCardLootSpawnManager();
     }
 
-    void T3DoorLootSpawnController( EntityAI Crate )
+    void T3DoorLootSpawnController( Object Crate )
     {
         Print("MissionServer::T3DoorLootSpawnController()");
     }
