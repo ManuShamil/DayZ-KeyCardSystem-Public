@@ -1,0 +1,6 @@
+//<'RedemptionKeyCards.pbo' properties via Mikero's dos tools, dll version 7.97>
+prefix=RedemptionKeyCards;
+Mikero=DePbo.dll.8.01;
+version=21092618;
+//PboType=Arma Addon;
+//</properties>

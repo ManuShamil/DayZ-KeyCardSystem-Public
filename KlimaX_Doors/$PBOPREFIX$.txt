@@ -1,0 +1,7 @@
+//<'KlimaX_Doors.pbo' properties via Mikero's dos tools, dll version 7.97>
+prefix=KlimaX_Doors;
+Mikero=DePbo.dll.7.97;
+version=21091119;
+//PboType=Arma Addon;
+//PboType=Arma Addon;
+//</properties>
