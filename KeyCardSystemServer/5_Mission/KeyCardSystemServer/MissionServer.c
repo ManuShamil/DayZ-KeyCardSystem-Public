@@ -1,5 +1,5 @@
-modded class MissionServer {
-
+modded class MissionServer 
+{
     override void OnMissionStart()
 	{
         super.OnMissionStart();

@@ -1,13 +1,13 @@
-class LootSpawnControllerBase
+class KeyCardLootSpawnControllerBase
 {
-	private ref static LootSpawnControllerBase m_Instance;
+	private ref static KeyCardLootSpawnControllerBase m_Instance;
 
-	void LootSpawnControllerBase()
+	void KeyCardLootSpawnControllerBase()
 	{
 		m_Instance = this;
 	}
 
-	static LootSpawnControllerBase GetInstance()
+	static KeyCardLootSpawnControllerBase GetInstance()
 	{
 		return m_Instance;
 	}
