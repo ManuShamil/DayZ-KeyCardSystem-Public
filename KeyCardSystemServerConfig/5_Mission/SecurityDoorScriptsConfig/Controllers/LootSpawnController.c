@@ -12,7 +12,7 @@ class KeyCardLootSpawnController : KeyCardLootSpawnControllerBase
 
     void T3Door( EntityAI crate )
     {
-        MissionServer.Cast( GetGame().GetMission() ).T1DoorLootSpawnController( crate );
+        MissionServer.Cast( GetGame().GetMission() ).T3DoorLootSpawnController( crate );
     }
 }
 
