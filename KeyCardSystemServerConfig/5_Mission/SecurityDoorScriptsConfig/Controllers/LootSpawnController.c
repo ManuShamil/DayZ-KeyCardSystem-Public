@@ -2,6 +2,8 @@ class LootSpawnController : LootSpawnControllerBase
 {
     void T3Door( EntityAI crate )
     {
+        Print("LootSpawnController::T3Door( crate )");
+
         LootSpawnManager.GetInstance().T3Door( crate );
     }
 }

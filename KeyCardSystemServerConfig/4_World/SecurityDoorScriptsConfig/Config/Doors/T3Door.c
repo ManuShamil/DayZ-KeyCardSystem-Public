@@ -9,6 +9,8 @@ modded class Land_KlimaX_T3Door
 
     override void AddLoot( EntityAI crate )
     {
-       LootSpawnControllerBase.GetInstance().T3Door( crate );
+        Print("Land_KlimaX_T3Door::AddLoot( crate )");
+
+        LootSpawnControllerBase.GetInstance().T3Door( crate );
     }
 };
