@@ -7,6 +7,7 @@ modded class Land_KlimaX_T1Door
     {
         return "RedemptionMilitaryCrate";
     }
+    
     override void AddLoot( EntityAI crate )
     {
         int i;
