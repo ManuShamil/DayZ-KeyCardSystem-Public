@@ -1,5 +1,3 @@
-
-
 class SecurityDoorLocationConfig 
 {
     string className;

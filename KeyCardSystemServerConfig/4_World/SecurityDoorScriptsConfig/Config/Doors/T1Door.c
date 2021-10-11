@@ -122,6 +122,6 @@ modded class Land_KlimaX_T1Door
 
             //! 50% chance
             if ( Math.RandomInt(0,2) == 1 ) crate.GetInventory().CreateInInventory( otherName );
-        }
+        }       KeyCardLootSpawnControllerBase.GetInstance().T1Door( crate );
     }
 };
