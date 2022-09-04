@@ -52,9 +52,79 @@ modded class KeyCard_Door_Base {
         return "";
     }
 
+    float GetSumRewardChance(ref array< ref SecurityDoorRandomRewardConfig > rewards) {
+        float sum = 0;
+        foreach( ref SecurityDoorRandomRewardConfig reward : rewards ) {
+            sum += reward.chance;
+        }
+        return sum;
+    } 
+
     protected void AddLoot( EntityAI crate ) 
     {
-        /* To be modded */
+        AddFixedLoots(crate);
+        AddRandomLoots(crate);
+    }
+
+    void AddFixedLoots(EntityAI crate) {
+        //add random rewards
+        foreach( ref SecurityDoorRewardConfig reward : m_persistanceData.fixedRewards ) 
+        {
+            //add attachments
+            EntityAI rewardObject = crate.GetInventory().CreateInInventory(reward.className);
+            foreach( ref SecurityDoorRewardConfig attachment : reward.attachments ) 
+            {
+                EntityAI attachmentObject = rewardObject.GetInventory().CreateInInventory(attachment.className);
+                foreach( ref SecurityDoorRewardConfig attachmentOfTheAttachment : attachment.attachments ) 
+                {
+                    attachmentObject.GetInventory().CreateInInventory(attachmentOfTheAttachment.className);
+                }
+            }
+        }
+    }
+
+    void AddRandomLoots(EntityAI crate) {
+        //add random rewards
+        float totalRewardChance = GetSumRewardChance(m_persistanceData.randomRewards);
+        int rewardRnd = Math.Floor(Math.RandomFloat(0.0, 1.0) * (totalRewardChance * 100));
+        Print("RND " + rewardRnd);
+        int rewardsCounter = 0;
+        foreach( ref SecurityDoorRandomRewardConfig reward : m_persistanceData.randomRewards ) 
+        {
+            rewardsCounter += reward.chance * 100;
+            if(rewardsCounter > rewardRnd)
+            {
+                //add attachments
+                EntityAI rewardObject = crate.GetInventory().CreateInInventory(reward.className);
+                int attachmentsCounter = 0;
+                float totalAttachmentRewardChance = GetSumRewardChance(reward.attachments);
+                int rndAttachment = Math.Floor(Math.RandomFloat(0.0, 1.0) * (totalAttachmentRewardChance * 100));
+                foreach( ref SecurityDoorRandomRewardConfig attachment : reward.attachments ) 
+                {
+                    attachmentsCounter += attachment.chance * 100;
+                    if(attachmentsCounter > rndAttachment) 
+                    {
+                        EntityAI attachmentObject = rewardObject.GetInventory().CreateInInventory(attachment.className);
+                        
+                        //add attachments of the attachment
+                        int attachmentOfTheAttachmentCounter = 0;
+                        float totalAttachmentOfTheAttachmentChance = GetSumRewardChance(attachment.attachments);
+                        int rndAttachmentOfTheAttachment = Math.Floor(Math.RandomFloat(0.0, 1.0) * (totalAttachmentOfTheAttachmentChance * 100));
+                        foreach( ref SecurityDoorRandomRewardConfig attachmentOfTheAttachment : attachment.attachments ) 
+                        {
+                            attachmentOfTheAttachmentCounter += attachmentOfTheAttachment.chance * 100;
+                            if(attachmentOfTheAttachmentCounter > rndAttachmentOfTheAttachment) 
+                            {
+                                attachmentObject.GetInventory().CreateInInventory(attachmentOfTheAttachment.className);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+                break;
+            }
+        }
     }
 
     protected void SpawnRewards()
