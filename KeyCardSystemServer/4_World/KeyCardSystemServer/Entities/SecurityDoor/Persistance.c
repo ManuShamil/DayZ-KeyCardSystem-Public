@@ -11,9 +11,15 @@ class SecurityDoorPersistanceData {
     ref map<int, bool> m_DoorState;
 	ref map<int, float> m_DoorTimers;
 
+    ref array< ref SecurityDoorRandomRewardConfig > randomRewards;
+    ref array< ref SecurityDoorRewardConfig > fixedRewards;
+
     void SecurityDoorPersistanceData() {
         m_DoorState = new map<int, bool>;
 		m_DoorTimers = new map<int, float>;
+
+        randomRewards = new array< ref SecurityDoorRandomRewardConfig >;
+        fixedRewards = new array< ref SecurityDoorRewardConfig >;
     }
 
     string GetType() {
@@ -82,6 +88,16 @@ class SecurityDoorPersistanceData {
     void SetCloseDelay( float amount )
     {
         closeDelay = amount;
+    }
+
+    void SetRandomRewards(array< ref SecurityDoorRandomRewardConfig > rewards)
+    {
+        randomRewards = rewards;
+    }
+
+    void SetFixedRewards( array< ref SecurityDoorRewardConfig > rewards )
+    {
+        fixedRewards = rewards;
     }
 
 }
