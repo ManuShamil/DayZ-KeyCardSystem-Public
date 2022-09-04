@@ -155,7 +155,7 @@ class PluginKeyCardSystemServer : PluginBase
 
         if ( !FileExist( CONFIG )) 
         {
-            generateRewardData(m_config);
+            generateRewardData();
             JsonFileLoader<ref KeyCardSystemConfig>.JsonSaveFile( CONFIG, m_config);
         }
 
@@ -172,7 +172,7 @@ class PluginKeyCardSystemServer : PluginBase
         m_HasConfigChanged = HasConfigChanged();
     }
 
-    void generateRewardData(KeyCardSystemConfig m_config)
+    void generateRewardData()
     {
         // create random rewards sample data
         array<ref SecurityDoorRandomRewardConfig> randomRewardsConfig = new array< ref SecurityDoorRandomRewardConfig>;
