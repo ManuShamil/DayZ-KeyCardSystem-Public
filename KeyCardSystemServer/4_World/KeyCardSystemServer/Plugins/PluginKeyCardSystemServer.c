@@ -98,11 +98,13 @@ class SecurityDoorLocationConfig
 class KeyCardSystemConfig
 {
     int version;
+    bool disableMapEditsPreset;
     ref array< ref SecurityDoorLocationConfig > locations;
 
     void KeyCardSystemConfig( int Version ) 
     {
         version = Version;
+        disableMapEditsPreset = true;
         locations = new array< ref SecurityDoorLocationConfig >;
     }
 
@@ -260,11 +262,13 @@ class PluginKeyCardSystemServer : PluginBase
             if ( currentConfig.GetCloseDelay() != persistanceConfig.GetCloseDelay() )
                 return true;
 
-            if ( currentConfig.GetRandomRewards() != persistanceConfig.GetRandomRewards() )
-                return true;
+            //! do not need to check for loot config, as persistance not needed for the configuration.
 
-            if ( currentConfig.GetFixedRewards() != persistanceConfig.GetFixedRewards() )
-                return true;
+            // if ( currentConfig.GetRandomRewards() != persistanceConfig.GetRandomRewards() )
+            //     return true;
+
+            // if ( currentConfig.GetFixedRewards() != persistanceConfig.GetFixedRewards() )
+            //     return true;
             
         }
 
@@ -277,7 +281,7 @@ class PluginKeyCardSystemServer : PluginBase
         DeleteFile( PERSISTANCE_DATA );
     }
 
-    void StaticItemsSpawn()
+    bool StaticItemsSpawn()
     {
         /*
         *   Override
@@ -285,7 +289,9 @@ class PluginKeyCardSystemServer : PluginBase
 
         Print("KEYCARDSYSTEM: SPAWNING STATIC ITEMS");
 
-        return;
+        if ( m_config.disableMapEditsPreset ) return false;
+
+        return true;
     }
 
 

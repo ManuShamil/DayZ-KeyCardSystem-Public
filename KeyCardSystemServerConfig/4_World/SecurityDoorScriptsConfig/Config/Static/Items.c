@@ -1,8 +1,8 @@
 modded class PluginKeyCardSystemServer
 {
-    override void StaticItemsSpawn()
+    override bool StaticItemsSpawn()
     {
-        super.StaticItemsSpawn();
+        if ( !super.StaticItemsSpawn() ) return false; //! check for disableMapEditsPreset
         
         SpawnObject( "vbldr_mil_aircraftshelter_door_r", "1746.469971 453.480011 14014.700195", "83.003548 0.000000 -0.000000" );
         SpawnObject( "vbldr_metal_plates_up", "1747.130005 454.799988 14019.799805", "-96.008247 0.000000 -0.000000" );
@@ -67,6 +67,8 @@ modded class PluginKeyCardSystemServer
         SpawnObject( "vbldr_wooden_log", "7623.220215 216.399994 5201.660156", "127.904243 -89.104523 7.099065" );
         SpawnObject( "vbldr_wooden_log", "7621.890137 214.817001 5201.649902", "179.999985 -89.980209 -0.000000" );
         SpawnObject( "vbldr_wooden_log", "7623.200195 214.817001 5201.609863", "90.000000 -89.928673 -0.000000" );
+		
+		return true;
     }
 
     private void SpawnObject(string objType, vector objPos, vector objOrientation)
