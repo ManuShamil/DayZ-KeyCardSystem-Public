@@ -4,18 +4,23 @@
     "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@CF/Addons/Scripts.pbo",
     "project_files": {
         "core": [
+            "JM/CF/Defines",
             "JM/CF/Scripts/1_Core"
         ],
         "gameLib": [
-            
+            "JM/CF/Defines",
+            "JM/CF/Scripts/2_GameLib"
         ],
         "game": [
+            "JM/CF/Defines",
             "JM/CF/Scripts/3_Game"
         ],
         "world": [
+            "JM/CF/Defines",
             "JM/CF/Scripts/4_World"
         ],
         "mission": [
+            "JM/CF/Defines",
             "JM/CF/Scripts/5_Mission"
         ]
     }

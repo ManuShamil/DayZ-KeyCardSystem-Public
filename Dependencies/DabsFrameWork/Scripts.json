@@ -1,0 +1,26 @@
+{
+    "comments": "for custom pbos with no pre existing templates",
+    "type": "pbo",
+    "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@Dabs Framework/Addons/Scripts.pbo",
+    "project_files": {
+        "image": [
+            "DabsFramework/gui/imagesets/prefabs.imageset"
+        ],
+        "widget": [
+            "DabsFramework/gui/looknfeel/prefabs.styles"
+        ],
+        "core": [
+            "DabsFramework/scripts/common","DabsFramework/scripts/1_core"
+        ],
+        "gameLib": [],
+        "game": [
+            "DabsFramework/scripts/common","DabsFramework/scripts/3_Game"
+        ],
+        "world": [
+            "DabsFramework/scripts/common","DabsFramework/scripts/4_World"
+        ],
+        "mission": [
+            "DabsFramework/scripts/common","DabsFramework/scripts/5_Mission"
+        ]
+    }  
+}

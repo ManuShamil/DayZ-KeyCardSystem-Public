@@ -1,0 +1,35 @@
+{
+    "noLoad": true,
+    "comments": "for custom pbos with no pre existing templates",
+    "type": "pbo",
+    "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@VPPAdminTools/Addons/VPPAdminTools.pbo",
+    "project_files": {
+        "image": [
+            "VPPAdminTools/GUI/Textures/dayz_gui_vpp.imageset"
+        ],
+        "widget": [
+            "VPPAdminTools/GUI/Styles/testStyle.styles"
+        ],
+        "core": [
+            "VPPAdminTools/Definitions",
+            "VPPAdminTools/VPPNotifications/Definitions",
+            "VPPAdminTools/1_Core"
+        ],
+        "gameLib": [],
+        "game": [
+            "VPPAdminTools/Definitions",
+            "VPPAdminTools/VPPNotifications/Definitions",
+            "VPPAdminTools/3_Game"
+        ],
+        "world": [
+            "VPPAdminTools/Definitions",
+            "VPPAdminTools/VPPNotifications/Definitions",
+            "VPPAdminTools/4_World"
+        ],
+        "mission": [
+            "VPPAdminTools/Definitions",
+            "VPPAdminTools/VPPNotifications/Definitions",
+            "VPPAdminTools/5_Mission"
+        ]
+    }  
+}

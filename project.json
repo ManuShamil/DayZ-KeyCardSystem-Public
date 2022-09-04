@@ -10,13 +10,21 @@
         "game": [
         ],
         "world": [
-
+            "KeyCardSystem/4_World",
+            "KeyCardSystemServer/4_World",
+            "KeyCardSystemServerConfig/4_World"
         ],
         "mission": [
-
+            
+            "KeyCardSystemServer/5_Mission"
         ]
     },
     "dependencies": [
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "Dependencies/CF/cf_defines.json"
+        },
         {
             "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
             "type": "setting",
@@ -25,31 +33,7 @@
         {
             "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
             "type": "setting",
-            "path": "Dependencies/CF/cf_xml.json"
-        },
-        {
-            "type": "pbo",
-            "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/KlimaX_Doors.pbo",
-            "noLoad": true,
-            "project_files": [
-
-            ]
-        },
-        {
-            "type": "pbo",
-            "path": "C:/Users/ManuShamil/Desktop/DayZDependencies/@KeyCardDoors/Addons/RedemptionKeyCards.pbo",
-            "noLoad": true,
-            "project_files": [
-
-            ]
-        },
-        {
-            "noLoad": true,
-            "comments": "for custom pbos with no pre existing templates",
-            "type": "pbo",
-            "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp/!Workshop/@VPPAdminTools/Addons/VPPAdminTools.pbo",
-            "project_files": {
-            }
+            "path": "Dependencies/VPPAdminTools/VPPAdminTools.json"
         }
     ]
 }
