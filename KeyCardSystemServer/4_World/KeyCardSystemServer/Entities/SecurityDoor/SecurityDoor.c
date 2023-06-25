@@ -72,6 +72,16 @@ modded class KeyCard_Door_Base {
         {
             //add attachments
             EntityAI rewardObject = crate.GetInventory().CreateInInventory(reward.className);
+
+	    if (reward.quantity != null) {
+		if (rewardObject.SetQuantity(reward.quantity)) {
+		    // If SetQuantity returns true, the item has been deleted.
+		    // https://dayzexplorer.zeroy.com/_item_base_8c.html#a1ff6d31268f1f510cb79c1e2f01a8e97
+		    // Recreate it and ignore quantities instead...
+		    rewardObject = crate.GetInventory().CreateInInventory(reward.className);
+		}
+	    }
+		
             foreach( ref SecurityDoorRewardConfig attachment : reward.attachments ) 
             {
                 EntityAI attachmentObject = rewardObject.GetInventory().CreateInInventory(attachment.className);
