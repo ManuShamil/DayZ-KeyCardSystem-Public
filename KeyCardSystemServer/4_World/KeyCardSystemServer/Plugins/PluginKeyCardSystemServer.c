@@ -1,10 +1,10 @@
 class SecurityDoorRewardConfig 
 {
     string className;
-    float quantity;
+    float? quantity;
     ref array< ref SecurityDoorRewardConfig > attachments;
 
-    void SecurityDoorRewardConfig( string class_name, float quantity_obj, ref array< ref SecurityDoorRewardConfig > attachments_obj) 
+    void SecurityDoorRewardConfig( string class_name, float? quantity_obj, ref array< ref SecurityDoorRewardConfig > attachments_obj) 
     {
         className = class_name;
 	quantity = quantity_obj;
