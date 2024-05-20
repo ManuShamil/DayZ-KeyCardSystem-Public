@@ -33,7 +33,7 @@
         {
             "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
             "type": "setting",
-            "path": "Dependencies/VPPAdminTools/VPPAdminTools.json"
+            "path": "Dependencies/COT/cot_scripts.json"
         }
     ]
 }
